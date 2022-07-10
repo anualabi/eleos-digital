@@ -30,7 +30,7 @@ const NavDrawer = () => {
 
   const list = (anchor: Anchor) => (
     <Box
-      sx={{ width: 200, height: '100%', backgroundColor: 'secondary.main', color: 'primary.main' }}
+      sx={{ width: 220, height: '100%', backgroundColor: 'secondary.main', color: 'primary.main' }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
