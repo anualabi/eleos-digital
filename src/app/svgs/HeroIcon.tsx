@@ -1,13 +1,12 @@
 import { SVGProps } from 'react';
 
-const HeroIcon = (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
+const HeroIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     width={731.502}
     height={624.428}
     viewBox="0 0 731.502 624.428"
-    {...props}
   >
     <defs>
       <linearGradient
