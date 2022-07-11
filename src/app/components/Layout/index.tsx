@@ -3,6 +3,7 @@ import HeroHeader from '../HeroHeader';
 import AboutUs from '../AboutUs';
 import Services from '../OurServices';
 import ContactUs from '../ContactUs';
+import Footer from '../Footer';
 
 const Layout = () => {
   return (
@@ -12,6 +13,7 @@ const Layout = () => {
       <AboutUs />
       <Services />
       <ContactUs />
+      <Footer />
     </>
   );
 };
