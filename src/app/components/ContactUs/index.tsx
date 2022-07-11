@@ -24,13 +24,13 @@ const ContactUs = () => {
           <Grid item xs={12} md={4}>
             <Box>
               <Typography component="p">Follow our socials</Typography>
-              <Link href="#/">
+              <Link href="#/" aria-label="Facebook">
                 <FacebookIcon />
               </Link>
-              <Link href="#/">
+              <Link href="#/" aria-label="Twitter">
                 <TwitterIcon />
               </Link>
-              <Link href="#/">
+              <Link href="#/" aria-label="Instagram">
                 <InstagramIcon />
               </Link>
             </Box>

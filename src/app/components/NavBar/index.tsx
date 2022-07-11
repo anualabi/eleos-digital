@@ -37,7 +37,7 @@ const NavBar = () => {
         <Container>
           <Toolbar disableGutters>
             <StyledLogo>
-              <HashLink smooth to="#top">
+              <HashLink smooth to="#top" aria-label="Logo">
                 <Logo />
               </HashLink>
             </StyledLogo>
