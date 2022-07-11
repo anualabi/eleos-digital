@@ -73,10 +73,10 @@ export const StyledAboutCard = styled(Box, {})`
 `;
 
 export const StyledScoreCard = styled(Box, {})`
-  background-color: #502894;
   padding: 2rem 1rem;
   text-align: center;
   ${({ theme }) => ({
+    backgroundColor: theme.palette.primary.light,
     borderBottom: `6px solid ${theme.palette.secondary.main}`
   })}
 

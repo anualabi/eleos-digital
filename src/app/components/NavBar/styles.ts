@@ -3,8 +3,10 @@ import Box from '@mui/material/Box';
 import { styled } from '@mui/system';
 
 export const StyledNavBar = styled(AppBar, {})`
-  background-color: transparent;
   box-shadow: none;
+  ${({ theme }) => ({
+    backgroundColor: theme.palette.primary.light
+  })}
 `;
 
 export const StyledLogo = styled(Box)`

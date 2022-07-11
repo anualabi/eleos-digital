@@ -1,26 +1,27 @@
 import Container from '@mui/material/Container';
 import Toolbar from '@mui/material/Toolbar';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
-import Slide from '@mui/material/Slide';
 import { HashLink } from 'react-router-hash-link';
 import Logo from '../../svgs/Logo';
 import NavDrawer from '../NavDrawer';
 import { StyledNavBar, StyledLogo, StyledMenu, StyledDrawer } from './styles';
+import React from 'react';
 
 interface Props {
   children: React.ReactElement;
 }
 
-function HideOnScroll(props: Props) {
+function ElevationScroll(props: Props) {
   const { children } = props;
 
-  const trigger = useScrollTrigger();
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0
+  });
 
-  return (
-    <Slide appear={false} direction="down" in={!trigger}>
-      {children}
-    </Slide>
-  );
+  return React.cloneElement(children, {
+    elevation: trigger ? 4 : 0
+  });
 }
 
 export const menu = [
@@ -31,7 +32,7 @@ export const menu = [
 
 const NavBar = () => {
   return (
-    <HideOnScroll>
+    <ElevationScroll>
       <StyledNavBar>
         <Container>
           <Toolbar disableGutters>
@@ -53,7 +54,7 @@ const NavBar = () => {
           </Toolbar>
         </Container>
       </StyledNavBar>
-    </HideOnScroll>
+    </ElevationScroll>
   );
 };
 
