@@ -1,6 +1,7 @@
 import NavBar from '../NavBar';
 import HeroHeader from '../HeroHeader';
 import AboutUs from '../AboutUs';
+import Services from '../OurServices';
 
 const Layout = () => {
   return (
@@ -8,6 +9,7 @@ const Layout = () => {
       <NavBar />
       <HeroHeader />
       <AboutUs />
+      <Services />
     </>
   );
 };

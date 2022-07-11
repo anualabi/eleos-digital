@@ -3,10 +3,15 @@ import Box from '@mui/material/Box';
 import { styled } from '@mui/system';
 
 export const StyledNavBar = styled(AppBar, {})`
-  box-shadow: none;
+  height: 100px;
+
   ${({ theme }) => ({
     backgroundColor: theme.palette.primary.light
   })}
+
+  @media (max-width: 699px) {
+    height: 90px;
+  }
 `;
 
 export const StyledLogo = styled(Box)`

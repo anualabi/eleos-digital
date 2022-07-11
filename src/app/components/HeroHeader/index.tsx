@@ -1,6 +1,6 @@
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import HeroIcon from '../../svgs/HeroIcon';
+import { HashLink } from 'react-router-hash-link';
 import { StyledHeroContainer, StyledHeroText, StyledHeroIcon } from './styles';
 
 const HeroHeader = () => {
@@ -12,7 +12,9 @@ const HeroHeader = () => {
           We use cutting edge technologies, combined with data-driven analytics to give your
           business the highest possible reach.
         </Typography>
-        <Button variant="contained">Read more</Button>
+        <HashLink smooth to="/#services">
+          Read more
+        </HashLink>
       </StyledHeroText>
       <StyledHeroIcon>
         <HeroIcon />

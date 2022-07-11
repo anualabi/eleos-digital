@@ -49,17 +49,21 @@ export const StyledHeroText = styled(Box, {})`
     }
   }
 
-  button,
-  button:hover {
-    font-size: 1rem;
-    font-weight: 500;
+  a,
+  a:hover {
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 400;
     text-alin: left;
     text-transform: uppercase;
     height: 55px;
     width: 190px;
     ${({ theme }) => ({
       backgroundColor: theme.palette.secondary.main,
-      color: 'black'
+      color: theme.palette.primary.main
     })}
 
     @media (max-width: 699px) {
