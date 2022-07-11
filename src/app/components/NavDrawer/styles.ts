@@ -1,10 +1,9 @@
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import { styled } from '@mui/system';
 
 export const StyledNavDrawer = styled(Box, {})``;
 
-export const StyledMenuIcon = styled(Button, {})`
+export const StyledMenuIcon = styled(Box, {})`
   display: flex;
   justify-content: flex-end;
   align-items: center;
