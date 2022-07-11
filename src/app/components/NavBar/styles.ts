@@ -27,10 +27,12 @@ export const StyledMenu = styled(Box)`
   display: flex;
   justify-content: flex-end;
 
-  button {
+  a {
+    border-radius: 4px;
     color: white;
     margin: 1rem 0 1rem 1rem;
     padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
 
     @media (max-width: 699px) {
       display: none;

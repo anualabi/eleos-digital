@@ -6,5 +6,9 @@ export const globalStyles = () => ({
     backgroundSize: 'cover',
     minHeight: '100vh',
     width: '100vw'
+  },
+  a: {
+    color: 'black',
+    textDecoration: 'none'
   }
 });

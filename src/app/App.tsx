@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import GlobalStyles from '@mui/material/GlobalStyles';
@@ -7,11 +8,15 @@ import { globalStyles } from './global-styles';
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <GlobalStyles styles={globalStyles} />
-      <Layout />
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <GlobalStyles styles={globalStyles} />
+        <Routes>
+          <Route path="/" element={<Layout />} />
+        </Routes>
+      </ThemeProvider>
+    </BrowserRouter>
   );
 };
 

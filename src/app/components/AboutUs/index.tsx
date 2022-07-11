@@ -20,7 +20,7 @@ export const scoreCard = [
 
 const AboutUs = () => {
   return (
-    <>
+    <section id="about-us">
       <StyledAboutContainer>
         <StyledAboutIcon>
           <AboutIcon />
@@ -49,7 +49,7 @@ const AboutUs = () => {
           </Grid>
         </Container>
       </StyledAboutCard>
-    </>
+    </section>
   );
 };
 

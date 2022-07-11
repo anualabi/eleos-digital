@@ -1,8 +1,8 @@
 import Container from '@mui/material/Container';
 import Toolbar from '@mui/material/Toolbar';
-import Button from '@mui/material/Button';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
+import { HashLink } from 'react-router-hash-link';
 import Logo from '../../svgs/Logo';
 import NavDrawer from '../NavDrawer';
 import { StyledNavBar, StyledLogo, StyledMenu, StyledDrawer } from './styles';
@@ -23,7 +23,11 @@ function HideOnScroll(props: Props) {
   );
 }
 
-export const menu = ['About us', 'Services', 'Contact us'];
+export const menu = [
+  { id: 1, link: '/#about-us', text: 'About us' },
+  { id: 2, link: '/#services', text: 'Services' },
+  { id: 3, link: '/#contact-us', text: 'Contact us' }
+];
 
 const NavBar = () => {
   return (
@@ -32,11 +36,15 @@ const NavBar = () => {
         <Container>
           <Toolbar disableGutters>
             <StyledLogo>
-              <Logo />
+              <HashLink smooth to="#top">
+                <Logo />
+              </HashLink>
             </StyledLogo>
             <StyledMenu>
               {menu.map((menu) => (
-                <Button key={menu}>{menu}</Button>
+                <HashLink smooth to={menu.link} key={menu.id}>
+                  {menu.text}
+                </HashLink>
               ))}
             </StyledMenu>
             <StyledDrawer>

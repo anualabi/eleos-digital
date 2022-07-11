@@ -5,6 +5,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import CloseIcon from '@mui/icons-material/Close';
+import { HashLink } from 'react-router-hash-link';
 import { menu } from '../NavBar';
 import HamburgerIcon from '../../svgs/Hamburger';
 import { StyledNavDrawer, StyledMenuIcon } from './styles';
@@ -39,10 +40,12 @@ const NavDrawer = () => {
         <CloseIcon />
       </Box>
       <List>
-        {menu.map((text) => (
-          <ListItem button key={text} sx={{ my: 1 }}>
-            <ListItemText primary={text} />
-          </ListItem>
+        {menu.map((menu) => (
+          <HashLink smooth to={menu.link} key={menu.id}>
+            <ListItem button sx={{ my: 1 }}>
+              <ListItemText primary={menu.text} />
+            </ListItem>
+          </HashLink>
         ))}
       </List>
     </Box>
