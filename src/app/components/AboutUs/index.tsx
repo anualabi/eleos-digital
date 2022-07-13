@@ -3,6 +3,7 @@ import AboutIcon from '../../svgs/AboutIcon';
 import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
+import { scoreCard } from '../../../utils/constants';
 import {
   StyledAboutContainer,
   StyledAboutIcon,
@@ -10,13 +11,6 @@ import {
   StyledAboutCard,
   StyledScoreCard
 } from './styles';
-
-export const scoreCard = [
-  { id: 1, title: 25, description: 'Happy Clients' },
-  { id: 2, title: 88, description: 'Coffee With Clients' },
-  { id: 3, title: 122, description: 'Projects Completed' },
-  { id: 4, title: 7500, description: 'Lines Of Code Daily' }
-];
 
 const AboutUs = () => {
   return (

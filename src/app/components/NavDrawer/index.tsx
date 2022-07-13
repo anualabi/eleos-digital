@@ -6,7 +6,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import CloseIcon from '@mui/icons-material/Close';
 import { HashLink } from 'react-router-hash-link';
-import { menu } from '../NavBar';
+import { menu } from '../../../utils/constants';
 import HamburgerIcon from '../../svgs/Hamburger';
 import { StyledNavDrawer, StyledMenuIcon } from './styles';
 
