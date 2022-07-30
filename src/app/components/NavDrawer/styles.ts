@@ -1,18 +1,55 @@
 import Box from '@mui/material/Box';
-import { styled } from '@mui/system';
+import { styled } from '@mui/material/styles';
 
-export const StyledNavDrawer = styled(Box, {})``;
-
-export const StyledMenuIcon = styled(Box, {})`
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-
-  svg {
-    width: 40px;
-
-    @media (max-width: 399px) {
+export const StyledMenuIcon = styled(Box)(
+  ({ theme }) => `
+    svg {
       width: 35px;
+
+      ${theme.breakpoints.up('sm')} {
+        width: 40px;
+      }
     }
-  }
-`;
+  `
+);
+
+export const StyledMobileNavList = styled(Box)(
+  ({ theme }) => `
+    background-color: ${theme.palette.secondary.main};
+    color: ${theme.palette.primary.main};
+    width: 220px;
+    height: 100%;
+
+    .close-mobile-nav {
+      display: flex;
+      justify-content: flex-end;
+      padding: 1rem 2rem;
+
+      svg {
+        font-size: 2rem;
+      }
+    }
+
+    .mobile-nav-list {
+      a {
+        span {
+          font-size: 1rem;
+          font-wight: bold;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    ${theme.breakpoints.up('sm')} {
+      width: 320px;
+
+      .mobile-nav-list {
+        a {
+          span {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  `
+);

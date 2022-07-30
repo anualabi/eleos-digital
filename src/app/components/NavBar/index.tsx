@@ -29,8 +29,8 @@ const NavBar = () => {
   return (
     <ElevationScroll>
       <StyledNavBar>
-        <Container>
-          <Toolbar disableGutters>
+        <Container maxWidth="xl" sx={{ height: '100%' }}>
+          <Toolbar disableGutters sx={{ height: '100%' }}>
             <StyledLogo>
               <HashLink smooth to="#top" aria-label="Logo">
                 <Logo />

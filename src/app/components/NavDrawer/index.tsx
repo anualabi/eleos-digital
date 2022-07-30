@@ -8,7 +8,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import { HashLink } from 'react-router-hash-link';
 import { menu } from '../../../utils/constants';
 import HamburgerIcon from '../../svgs/Hamburger';
-import { StyledNavDrawer, StyledMenuIcon } from './styles';
+import { StyledMenuIcon, StyledMobileNavList } from './styles';
 
 type Anchor = 'right';
 
@@ -30,16 +30,15 @@ const NavDrawer = () => {
     };
 
   const list = (anchor: Anchor) => (
-    <Box
-      sx={{ width: 220, height: '100%', backgroundColor: 'secondary.main', color: 'primary.main' }}
+    <StyledMobileNavList
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <Box sx={{ display: 'flex', justifyContent: 'flex-end', pt: 2, px: 4 }}>
+      <Box className="close-mobile-nav">
         <CloseIcon />
       </Box>
-      <List>
+      <List className="mobile-nav-list">
         {menu.map((menu) => (
           <HashLink smooth to={menu.link} key={menu.id}>
             <ListItem button sx={{ my: 1 }}>
@@ -48,18 +47,18 @@ const NavDrawer = () => {
           </HashLink>
         ))}
       </List>
-    </Box>
+    </StyledMobileNavList>
   );
 
   return (
-    <StyledNavDrawer>
+    <Box>
       <StyledMenuIcon onClick={toggleDrawer(anchor, true)}>
         <HamburgerIcon />
       </StyledMenuIcon>
       <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
         {list(anchor)}
       </Drawer>
-    </StyledNavDrawer>
+    </Box>
   );
 };
 
