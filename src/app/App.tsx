@@ -3,7 +3,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import { theme } from './theme';
-import Layout from './components/Layout';
+import HomePage from './components/HomePage';
 import { globalStyles } from './global-styles';
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
         <CssBaseline />
         <GlobalStyles styles={globalStyles} />
         <Routes>
-          <Route path="/" element={<Layout />} />
+          <Route path="/" element={<HomePage />} />
         </Routes>
       </ThemeProvider>
     </BrowserRouter>
