@@ -1,24 +1,26 @@
 import Typography from '@mui/material/Typography';
-import HeroIcon from '../../svgs/HeroIcon';
+import HeroImage from '../../svgs/HeroImage';
 import { HashLink } from 'react-router-hash-link';
-import { StyledHeroContainer, StyledHeroText, StyledHeroIcon } from './styles';
+import { StyledHeroContainer, StyledHeroText, StyledHeroImage } from './styles';
 
 const HeroHeader = () => {
   return (
-    <StyledHeroContainer>
+    <StyledHeroContainer maxWidth="xl">
       <StyledHeroText>
-        <Typography component="h1">We can make your business visible</Typography>
-        <Typography component="p">
+        <Typography variant="h1" className="heading">
+          We can make your business visible
+        </Typography>
+        <Typography variant="body1" className="subheading">
           We use cutting edge technologies, combined with data-driven analytics to give your
           business the highest possible reach.
         </Typography>
-        <HashLink smooth to="/#services">
+        <HashLink smooth to="/#services" className="cta-btn">
           Read more
         </HashLink>
       </StyledHeroText>
-      <StyledHeroIcon>
-        <HeroIcon />
-      </StyledHeroIcon>
+      <StyledHeroImage>
+        <HeroImage />
+      </StyledHeroImage>
     </StyledHeroContainer>
   );
 };

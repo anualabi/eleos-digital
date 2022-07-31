@@ -1,94 +1,88 @@
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
-import { styled } from '@mui/system';
+import { styled } from '@mui/material/styles';
 
-export const StyledHeroContainer = styled(Container, {})`
-  display: flex;
-  justify-content: space-evenly;
-  height: 90vh;
-  margin-top: 5rem;
-
-  @media (max-width: 699px) {
+export const StyledHeroContainer = styled(Container)(
+  ({ theme }) => `
+    display: flex;
     flex-direction: column-reverse;
-  }
-`;
+    justify-content: space-evenly;
+    min-height: 90vh;
+    margin-top: 5rem;
 
-export const StyledHeroText = styled(Box, {})`
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 5%;
-  width: 50%;
+    ${theme.breakpoints.up('md')} {
+      flex-direction: row;
+    }
+  `
+);
 
-  @media (max-width: 699px) {
-    margin: -10rem auto 0;
+export const StyledHeroText = styled(Box)(
+  ({ theme }) => `
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: -15rem auto 0;
     padding: 0 1%;
     text-align: center;
     width: 95%;
-  }
 
-  h1 {
-    font-size: 2.8rem;
-    font-weight: 500;
-    line-height: 1.3;
-    margin-bottom: 1rem;
-
-    @media (max-width: 699px) {
-      font-size: 2.3rem;
+    .heading {
+      margin: -1rem auto 1rem;
     }
-  }
 
-  p {
-    font-size: 1.1rem;
-    font-weight: 300;
-    margin-bottom: 2rem;
-
-    @media (max-width: 699px) {
-      font-size: 1rem;
+    .subheading {
+      margin-bottom: 2rem;
     }
-  }
 
-  a,
-  a:hover {
-    border-radius: 4px;
+    .cta-btn,
+    .cta-btn:hover {
+      background-color: ${theme.palette.secondary.main};
+      color: ${theme.palette.primary.main};
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: auto;
+      text-alin: left;
+      text-transform: uppercase;
+      height: 55px;
+      width: 190px;
+    }
+
+    ${theme.breakpoints.up('md')} {
+      margin: 0 auto;
+      padding: 0 5%;
+      text-align: left;
+      width: 50%;
+
+      .cta-btn,
+      .cta-btn:hover {
+        margin: 0;
+      }
+    }
+  `
+);
+
+export const StyledHeroImage = styled(Box)(
+  ({ theme }) => `
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
-    font-weight: 400;
-    text-alin: left;
-    text-transform: uppercase;
-    height: 55px;
-    width: 190px;
-    ${({ theme }) => ({
-      backgroundColor: theme.palette.secondary.main,
-      color: theme.palette.primary.main
-    })}
+    margin: -15rem auto 0;
+    max-width: 350px;
 
-    @media (max-width: 699px) {
-      margin: auto;
+    svg {
+      width: 90%;
     }
-  }
-`;
 
-export const StyledHeroIcon = styled(Box, {})`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
 
-  @media (max-width: 699px) {
-    margin-top: -8rem;
-    width: 100%;
-  }
-
-  svg {
-    width: 90%;
-
-    @media (max-width: 699px) {
-      width: 80%;
+    ${theme.breakpoints.up('md')} {
+      margin-top: 0rem;
+      max-width: 50%;
     }
-  }
-`;
+  `
+);

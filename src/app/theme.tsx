@@ -20,6 +20,67 @@ export const theme = createTheme({
     }
   },
   typography: {
-    fontFamily: 'Roboto'
+    fontFamily: 'Roboto',
+    h1: {
+      fontSize: '1.8rem',
+      fontWeight: 600,
+      lineHeight: 1.5,
+      '@media (min-width:576px)': {
+        fontSize: '2.2rem'
+      },
+      '@media (min-width:768px)': {
+        fontSize: '2.6rem'
+      }
+    },
+    h2: {
+      fontSize: '1.6rem',
+      fontWeight: 600,
+      lineHeight: 1.5,
+      '@media (min-width:768px)': {
+        fontSize: '2rem'
+      }
+    },
+    h3: {
+      fontSize: '1.4rem',
+      fontWeight: 600,
+      lineHeight: 1.5,
+      '@media (min-width:768px)': {
+        fontSize: '1.8rem'
+      }
+    },
+    h4: {
+      fontSize: '1.2rem',
+      fontWeight: 600,
+      lineHeight: 1.5,
+      '@media (min-width:768px)': {
+        fontSize: '1.6rem'
+      }
+    },
+    h5: {
+      fontSize: '1rem',
+      fontWeight: 600,
+      lineHeight: 1.5,
+      '@media (min-width:768px)': {
+        fontSize: '1.2rem'
+      }
+    },
+    h6: {
+      fontSize: '0.9rem',
+      fontWeight: 600,
+      lineHeight: 1.5,
+      '@media (min-width:768px)': {
+        fontSize: '1rem'
+      }
+    },
+    body1: {
+      fontSize: '0.8rem',
+      lineHeight: 1.5,
+      '@media (min-width:576px)': {
+        fontSize: '0.9rem'
+      },
+      '@media (min-width:768px)': {
+        fontSize: '1rem'
+      }
+    }
   }
 });
