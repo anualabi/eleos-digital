@@ -73,10 +73,10 @@ export const theme = createTheme({
       }
     },
     body1: {
-      fontSize: '0.8rem',
+      fontSize: '0.85rem',
       lineHeight: 1.5,
       '@media (min-width:576px)': {
-        fontSize: '0.9rem'
+        fontSize: '0.95rem'
       },
       '@media (min-width:768px)': {
         fontSize: '1rem'
