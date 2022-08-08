@@ -20,7 +20,7 @@ export const theme = createTheme({
     }
   },
   typography: {
-    fontFamily: 'Roboto',
+    fontFamily: ['"Roboto"', 'sans-serif'].join(','),
     h1: {
       fontSize: '1.8rem',
       fontWeight: 600,
