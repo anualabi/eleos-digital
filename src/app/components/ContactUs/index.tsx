@@ -14,16 +14,16 @@ const ContactUs = () => {
   return (
     <StyledContactContainer id="contact-us">
       <Container>
-        <Typography component="h2">Contact Us</Typography>
-        <Divider />
-        <Typography component="p">Let's help build your next project</Typography>
+        <Typography variant="h2">Contact Us</Typography>
+        <Divider className="divider" />
+        <Typography variant="body1">Let's help build your next project</Typography>
         <Grid container spacing={2}>
           <Grid item xs={12} md={4}>
             <Box></Box>
           </Grid>
           <Grid item xs={12} md={4}>
             <Box>
-              <Typography component="p">Follow our socials</Typography>
+              <Typography variant="body1">Follow our socials</Typography>
               <Link href="#/" aria-label="Facebook">
                 <FacebookIcon />
               </Link>
@@ -36,7 +36,7 @@ const ContactUs = () => {
             </Box>
           </Grid>
           <Grid item xs={12} md={4}>
-            <Typography component="p">Monday - Friday : 8am - 6pm (WAT)</Typography>
+            <Typography variant="body1">Monday - Friday : 8am - 6pm (WAT)</Typography>
             <Link href="mailto:hello@eleosdigital.com">
               <Box className="email-wrapper">
                 <EmailIcon />

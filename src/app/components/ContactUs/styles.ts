@@ -1,68 +1,53 @@
 import Box from '@mui/material/Box';
 import { styled } from '@mui/system';
 
-export const StyledContactContainer = styled(Box, {})`
-  color: white;
-  padding: 5rem 0;
-  ${({ theme }) => ({
-    backgroundColor: theme.palette.primary.main
-  })}
-
-  @media (max-width: 699px) {
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 2.5rem;
-
-    @media (max-width: 699px) {
-      font-size: 2.2rem;
-    }
-  }
-
-  hr {
-    width: 90px;
-    margin-bottom: 1rem;
-    ${({ theme }) => ({
-      backgroundColor: theme.palette.secondary.main
-    })}
-
-    @media (max-width: 699px) {
-      margin: 0 auto 1rem;
-    }
-  }
-
-  p {
-    font-weight: 300;
-    margin-bottom: 0.25rem;
-
-    @media (max-width: 699px) {
-      font-size: 1rem;
-    }
-  }
-
-  a {
+export const StyledContactContainer = styled(Box)(
+  ({ theme }) => `
+    background-color: ${theme.palette.primary.main};
     color: white;
+    padding: 5rem 0;
+    text-align: center;
 
-    &:hover {
-      text-decoration: none;
-      ${({ theme }) => ({
-        color: theme.palette.secondary.main
-      })}
+    .divider {
+      background-color: ${theme.palette.secondary.main};
+      width: 90px;
+      margin: 0.5rem auto 1rem;
     }
-  }
 
-  svg {
-    margin-right: 0.5rem;
-    width: 30px;
-  }
+    p {
+      margin-bottom: 0.25rem;
+    }
 
-  .email-wrapper {
-    display: flex;
-    align-items: center;
+    a {
+      color: white;
 
-    @media (max-width: 699px) {
+      &:hover {
+        color: ${theme.palette.secondary.main};
+        text-decoration: none;
+      }
+    }
+
+    svg {
+      margin-right: 0.5rem;
+      width: 30px;
+    }
+
+    .email-wrapper {
+      display: flex;
+      align-items: center;
       justify-content: center;
     }
-  }
-`;
+
+    ${theme.breakpoints.up('md')} {
+      text-align: left;
+
+      .divider {
+        margin: 0.5rem 0 1rem;
+      }
+
+      .email-wrapper {
+        justify-content: start;
+      }
+    }
+  `
+);
