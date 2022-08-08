@@ -1,29 +1,30 @@
 import Container from '@mui/material/Container';
 import { styled } from '@mui/system';
 
-export const StyledFooterContainer = styled(Container, {})`
-  color: white;
-  display: flex;
-  padding: 1.75rem 0;
-
-  @media (max-width: 699px) {
+export const StyledFooterContainer = styled(Container)(
+  ({ theme }) => `
+    color: white;
+    display: flex;
     flex-wrap: wrap;
-  }
+    padding: 1.75rem 0;
 
-  .copyright,
-  .all-rights {
-    font-size: 0.9rem;
-    font-weight: 300;
-    margin: 0.25rem 0;
-
-    @media (max-width: 699px) {
-      font-size: 0.8rem;
+    .copyright,
+    .all-rights {
+      margin: 0.25rem 0;
       text-align: center;
       width: 100%;
     }
-  }
 
-  .copyright {
-    margin-right: 0.5rem;
-  }
-`;
+    .copyright {
+      margin-right: 0.5rem;
+    }
+
+    ${theme.breakpoints.up('md')} {
+      .copyright,
+      .all-rights {
+        text-align: left;
+        width: auto;
+      }
+    }
+  `
+);

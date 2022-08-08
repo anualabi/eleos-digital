@@ -4,10 +4,12 @@ import { StyledFooterContainer } from './styles';
 const Footer = () => {
   return (
     <StyledFooterContainer>
-      <Typography className="copyright">
+      <Typography variant="body2" className="copyright">
         Copyright © {new Date().getFullYear()} Eleos Digital.
       </Typography>
-      <Typography className="all-rights">All rights reserved.</Typography>
+      <Typography variant="body2" className="all-rights">
+        All rights reserved.
+      </Typography>
     </StyledFooterContainer>
   );
 };

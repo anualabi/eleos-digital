@@ -81,6 +81,16 @@ export const theme = createTheme({
       '@media (min-width:768px)': {
         fontSize: '1rem'
       }
+    },
+    body2: {
+      fontSize: '0.8rem',
+      lineHeight: 1.6,
+      '@media (min-width:576px)': {
+        fontSize: '0.85rem'
+      },
+      '@media (min-width:768px)': {
+        fontSize: '0.9rem'
+      }
     }
   }
 });
