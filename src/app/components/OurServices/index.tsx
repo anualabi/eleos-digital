@@ -5,29 +5,33 @@ import { services } from '../../../utils/constants';
 import {
   StyledServicesContainer,
   StyledServicesHeading,
-  StyledServicesGrid,
-  StyledServicesCard
+  StyledServicesList,
+  StyledServicesItem
 } from './styles';
 
 const Services = () => {
   return (
     <StyledServicesContainer id="services">
       <StyledServicesHeading>
-        <Typography component="h2">Services</Typography>
-        <Divider />
-        <Typography component="p">What we offer</Typography>
+        <Typography variant="h2">Services</Typography>
+        <Divider className="divider" />
+        <Typography variant="body1">What we offer</Typography>
       </StyledServicesHeading>
-      <StyledServicesGrid container spacing={0}>
+      <StyledServicesList container spacing={0}>
         {services.map((service) => (
           <Grid item xs={12} md={6} key={service.id}>
-            <StyledServicesCard>
+            <StyledServicesItem>
               {service.image}
-              <Typography component="h3">{service.title}</Typography>
-              <Typography component="p">{service.text}</Typography>
-            </StyledServicesCard>
+              <Typography variant="h4" className="title">
+                {service.title}
+              </Typography>
+              <Typography variant="body1" className="text">
+                {service.text}
+              </Typography>
+            </StyledServicesItem>
           </Grid>
         ))}
-      </StyledServicesGrid>
+      </StyledServicesList>
     </StyledServicesContainer>
   );
 };
